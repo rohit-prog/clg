@@ -1,0 +1,70 @@
+import java.awt.*;  
+public class reg
+{  
+public static void main(String[] args)
+ {  
+Frame f=new Frame("Button Example");  
+
+Button b1=new Button("NAME");  
+b1.setBounds(50,100,100,30);  
+f.add(b1);  
+
+TextField tf1=new TextField();  
+tf1.setBounds(170,100, 150,20);
+f.add(tf1);
+
+Button b2=new Button("ROLL NO.");  
+b2.setBounds(50,150,100,30);  
+f.add(b2);  
+
+TextField tf2=new TextField();  
+tf2.setBounds(170,150, 150,20);
+f.add(tf2);
+
+Button b3=new Button("ADDRESS");  
+b3.setBounds(50,200,100,30);  
+f.add(b3);  
+
+TextField tf3=new TextField();  
+tf3.setBounds(170,200, 150,20);
+f.add(tf3);
+
+
+Button b5=new Button("MAIL");  
+b5.setBounds(50,250,100,30);  
+f.add(b5);  
+
+TextField tf5=new TextField();  
+tf5.setBounds(170,250, 150,20);
+f.add(tf5);
+
+Button b4=new Button("DIVISION");  
+b4.setBounds(50,300,100,30);  
+f.add(b4);
+ 
+TextField tf4=new TextField();  
+tf4.setBounds(170,300, 150,20);
+f.add(tf4);
+
+Button submit=new Button("submit");  
+submit.setBounds(100,400,100,50);  
+f.add(submit);
+Button reset=new Button("reset");  
+reset.setBounds(200,400,100,50);  
+f.add(reset);
+
+ CheckboxGroup cbg = new CheckboxGroup();  
+ Checkbox checkBox1 = new Checkbox("MALE", cbg, false);    
+checkBox1.setBounds(100,350, 50,50);    
+Checkbox checkBox2 = new Checkbox("FEMALE", cbg, true);    
+checkBox2.setBounds(200,350, 65,50);    
+ f.add(checkBox1);    
+ f.add(checkBox2);    
+
+f.setBackground(Color.blue);
+f.setSize(500,500);  
+f.setLayout(null);  
+f.setVisible(true);  
+
+}  
+}
