@@ -1,0 +1,86 @@
+// WAP to find the factorial of the given number.
+importjava.util.Scanner;
+class A
+{
+public static void main(String args[])
+{
+intn,i,fact=1;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter a no");
+n=sc.nextInt();
+for(i=1;i<=n;i++)
+{fact=fact*i;}
+System.out.println("Factorial of "+n+" is "+fact );
+}}
+
+
+// WAP to display the Fibonacci series
+importjava.util.Scanner;
+class A
+{
+public static void main(String args[])
+{
+inta,b,sum,i,n;
+a=0;
+b=1;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the length of series");
+n=sc.nextInt();
+for(i=0;i<n;i++)
+{
+System.out.print(a+"\t");
+sum=a+b;
+a=b;
+b=sum;
+}
+}
+}
+
+// AIM:WAP to find the reverse and print the sum of digits of the given number.
+import java.util.Scanner;
+public class Use_Do_While
+{
+    public static void main(String[] args)
+{
+        int n, a, m = 0, sum = 0;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter any number:");
+       n = s.nextInt();
+        do
+        {
+            a = n % 10;
+           m = m * 10 + a;
+           sum = sum + a;
+           n = n / 10;
+       }
+       while( n > 0);
+       System.out.println("Reverse:"+m);
+       System.out.println("Sum of digits:"+sum);
+    }
+}
+
+// AIM:WAP to check whether given number is Armstrong.
+importjava.util.Scanner;
+class A
+{
+public static void main(String args[])
+{
+intn,temp,rem,sum=0;
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter a three digit No");
+n=sc.nextInt();
+temp=n;
+while(n>0)
+{
+rem=n%10;
+sum=sum+rem*rem*rem;
+n=n/10;
+}
+if(sum==temp)
+System.out.print("It is an Armstrong");
+else
+System.out.print("It is not an Armstrong");
+}
+}	
+
+
