@@ -1,0 +1,28 @@
+class stat
+{  
+   int rollno;  
+   String name;  
+   static String college ="ITS";
+   
+   stat(int r, String n)
+   {  
+   rollno = r;  
+   name = n;  
+   }  
+     
+   void display ()
+   {
+System.out.println(rollno+" "+name+" "+college);  
+   }  
+}
+class stat1
+{  
+ public static void main(String args[])
+{  
+ stat s1 = new stat(111,"Karan");  
+ stat s2 = new stat(222,"Aryan");  
+ 
+ s1.display();  
+ s2.display();  
+ }  
+}  
