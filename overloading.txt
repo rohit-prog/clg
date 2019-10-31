@@ -1,0 +1,32 @@
+class overload
+{
+void test()
+{
+System.out.println("no parameter");
+}
+void test(int a)
+{
+System.out.println("one parameter=" +a);
+}
+void test(double a)
+{
+System.out.println("double value=" +a);
+}
+void test(int a, int b)
+{
+System.out.println("Integer=" +a+ "and" +b);
+}
+}
+class boxdemo
+{
+public static void main(String args[])
+{
+int x=5, y=3, z=7;
+double p=3.78;
+overload o1=new overload();
+o1.test();
+o1.test(x);
+o1.test(x,y);
+o1.test(p);
+}
+}
