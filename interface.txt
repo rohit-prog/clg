@@ -1,0 +1,31 @@
+interface area
+{
+static double pi = 3.14f;
+public double compute(double x,double y);
+}
+class rect implements area{
+public double compute(double x,double y)
+{
+return x*y;
+}
+}
+
+class cir implements area{
+public double compute(double x,double y)
+{
+return pi*x*x;
+}
+}
+class A{
+public static void main(String ad[])
+{
+rect r = new rect();
+cir c=  new cir();
+area a;
+a=r;
+System.out.println("Area of rectangle is  "+a.compute(10.00,40.00));
+a=c;
+System.out.println("Area of circle is  "+a.compute(20.00,0));
+
+}
+} 

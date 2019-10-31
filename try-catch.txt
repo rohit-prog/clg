@@ -1,0 +1,29 @@
+import java.io.*;
+
+class Nested_Try
+{
+	public static void main(String args[])
+	{
+		try{ 
+			DataInputStream X=new DataInputStream(System.in);
+			System.out.print("Enter First No:");
+			int a = Integer.parseInt (X.readLine());
+			System.out.print("Enter Second No:");
+			int b = Integer.parseInt (X.readLine());
+			int quot = 0;
+			try{
+				quot = a/b;
+				System.out.println(quot);
+			}
+			catch (ArithmeticException e){
+				System.out.println("divide by zero");
+			}
+		}
+		catch (NumberFormatException e){
+			System.out.println ("Incorrect Input");
+		}
+		catch (IOException e){
+			System.out.println ("IO Error");
+		} 
+	}
+}

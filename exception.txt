@@ -1,0 +1,23 @@
+class multicatch
+{
+public static void main(String args[])
+{
+try{
+int a =args.length;
+System.out.println("a = " + a );
+int b = 22/a;
+int c[]={1,8,15};
+c[6]=28;
+System.out.println("This will not print");
+}
+catch(ArithmeticException ae)
+{
+System.out.println("Division by zero");
+}
+catch(ArrayIndexOutOfBoundsException ai)
+{
+System.out.println("OUT OF BOUNDS");
+}
+System.out.println("After catch");
+}
+}

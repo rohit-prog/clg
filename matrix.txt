@@ -1,0 +1,135 @@
+import java.util.Scanner;
+class Mat
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter The Number Of Rows and colums for matrix 1");
+        int a = sc.nextInt();
+int s;
+        int[][] matrix1 = new int[a][a];
+        System.out.println("Enter Matrix1 Data");
+         
+        for (int i = 0; i < a; i++)
+        {
+            for (int j = 0; j < a; j++)
+            {
+                matrix1[i][j] = sc.nextInt();
+            }
+        }
+         
+        System.out.println("Your Matrix is1 : ");
+         
+        for (int i = 0; i < a; i++)
+        {
+            for (int j = 0; j < a; j++)
+            {
+                System.out.print(matrix1[i][j]+"\t");
+            }
+             
+            System.out.println();
+        }
+    int[][] matrix2 = new int[a][a];
+         
+        System.out.println("Enter Matrix2 Data");
+         
+        for (int i = 0; i < a; i++)
+        {
+            for (int j = 0; j <a; j++)
+            {
+                matrix2[i][j] = sc.nextInt();
+            }
+        }
+         
+        System.out.println("Your Matrix is2 : ");
+         
+        for (int i = 0; i < a; i++)
+        {
+            for (int j = 0; j < a; j++)
+            {
+                System.out.print(matrix2[i][j]+"\t");
+            }
+             
+            System.out.println();
+        }
+
+do
+{
+System.out.println("FOR ADDITION , ENTER 1");
+System.out.println("FOR MULTIPLICATION , ENTER 2");
+System.out.println("FOR TRANSPOSE OF MATRIX , ENTER 3");
+int b = sc.nextInt();
+switch(b)
+{
+case 1: int[][] resa= new int[a][a];
+for(int i=0;i<a;i++)
+{
+for(int j=0;j<a;j++)
+{
+resa[i][j]=matrix1[i][j]+matrix2[i][j];
+}
+}
+System.out.println("YOUR RESULTANT MATRIX IS: ");
+for(int i=0;i<a;i++)
+{
+for(int j=0;j<a;j++)
+{
+System.out.print(resa[i][j]+"\t");
+}
+System.out.println();
+}
+break;
+
+case 2:
+int[][]resm=new int[a][a];
+for (int i = 0; i < a; i++)
+{
+     for (int j = 0; j < a; j++)
+            {  
+      resm[i][j] = 0;
+               for (int k = 0; k < a; k++)
+                 resm[i][j]=resm[i][j]+ matrix1[i][k]*matrix2[k][j];
+         
+      }
+ }
+ System.out.println("Product of the matrices:");
+ for (int i = 0; i < a; i++)
+         {
+            for (int j = 0; j < a; j++)
+               System.out.print(resm[i][j]+"\t");
+ 
+            System.out.print("\n");
+         }
+
+case 3:
+System.out.println("TRANPOSE OF MATRIX1 IS:");
+for(int i = 0; i < a; i++)
+    {
+         for(int j = 0; j < a; j++)
+            {
+                System.out.print(matrix1[j][i]+" ");
+            }
+            System.out.println(" ");
+        }
+System.out.println("TRANPOSE OF MATRIX1 IS:");
+for(int i = 0; i < a; i++)
+    {
+         for(int j = 0; j < a; j++)
+            {
+                System.out.print(matrix2[j][i]+" ");
+            }
+            System.out.println(" ");
+        }
+break;
+
+default: System.out.println("WRONG ENTRY");
+break;
+}
+System.out.println("DO YOU WANT TO CONTINUE ? YES(1)/NO(0)");
+s=sc.nextInt();
+}
+
+while(s==1);
+
+}
+} 

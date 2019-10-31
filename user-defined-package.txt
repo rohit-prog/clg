@@ -1,0 +1,36 @@
+package pack1;
+public class A
+{
+ public void display()
+{
+  System.out.println("Inside class A");
+}
+}
+
+
+
+package pack1;
+public class B
+{
+ public void display()
+{
+ System.out.println("Inside class B");
+}
+}
+
+
+
+
+import pack1.A;
+import pack1.B;
+class packtest
+{
+public static void main(String args[])
+{
+A a=new A();
+B b=new B();
+a.display();
+b.display();
+}
+}
+

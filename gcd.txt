@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class gcd1
+{ public static void main(String[] args)
+ {
+   Scanner sc= new Scanner(System.in);
+  System.out.println("please enter the first number to find gcd");
+  int number1=sc.nextInt();
+  System.out.println("please enter the second number to find gcd");
+  int number2=sc.nextInt();
+  System.out.println("gcd of two number"+number1+"and"+number2+"is"+findgcd(number1,number2));
+}
+private static int findgcd(int number1,int number2)
+{
+ if(number2==0)
+{ return number1;
+}
+return findgcd(number2,number1%number2);
+}
+} 

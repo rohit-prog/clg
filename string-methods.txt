@@ -1,0 +1,45 @@
+import java.util.*;
+class string
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+String s1;
+System.out.println("Enter a String");
+s1=sc.nextLine();
+System.out.println("Using scanner class "+s1);
+String s2="SIESGST";
+System.out.println("Using Direct Assignment "+s2);
+char c[]={'s','i','e','s','g','s','t'};
+System.out.println("Using Array "+c);
+String s3=new String(c);
+System.out.println("Using new Method "+s3);
+System.out.println("Length of S1 is "+s1.length());
+System.out.println("Character at 4th Position is "+s1.charAt(3));
+System.out.println("Substring of S1 is "+s1.substring(4)); 
+System.out.println("Substring of S1 is "+s1.substring(0,4)); 
+System.out.println("Capitalize s1 "+s1.toUpperCase()); 
+System.out.println("Capitalize s1 "+s1.toLowerCase()); 
+System.out.println("s1 equals to s2="+s1.equals(s2));
+System.out.println("s1 trimmed is="+s1.trim());
+System.out.println("replacing s by p in s1"+s1.replace('s','p')); 
+System.out.println("Concatenated String Is  "+s1.concat(s2));
+System.out.println(" "+s1.toUpperCase());  
+
+}
+} 
+import java.util.*;
+class staticbuffer
+{
+public static void main(String args[])
+{
+StringBuffer s1=new StringBuffer("SIESGST");
+s1.append(" Nerul");
+System.out.println("Append in s1 = "+s1);
+s1.insert(7,"IT");
+System.out.println("NEW s1 is "+s1);
+System.out.println("Reverse of s1 is "+s1.reverse());
+s1.replace(4,7,"ABC");
+System.out.println("After replacing s1 is "+s1);
+}
+}

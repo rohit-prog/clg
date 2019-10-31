@@ -1,0 +1,44 @@
+class threadtest
+{
+public static void main(String args[])
+{
+A a =new A();
+a.start();
+new B().start();
+new C().start();
+}
+}
+class A extends Thread
+{
+public void run()
+{
+for(int i=1;i&lt;=5;i++)
+{
+System.out.println(&quot;from thread A: i=&quot;+i);
+}
+System.out.println(&quot;EXIT FROM A&quot;);
+}
+}
+class B extends Thread
+{
+public void run()
+{
+for(int i=1;i&lt;=5;i++)
+{
+System.out.println(&quot;from thread B: i=&quot;+i);
+}
+System.out.println(&quot;EXIT FROM B&quot;);
+}
+
+}
+class C extends Thread
+{
+public void run()
+{
+for(int i=1;i&lt;=5;i++)
+{
+System.out.println(&quot;from thread C: i=&quot;+i);
+}
+System.out.println(&quot;EXIT FROM C&quot;);
+}
+}
