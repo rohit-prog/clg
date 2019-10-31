@@ -1,0 +1,35 @@
+class A
+{
+int i,j;
+A(int a,int b)
+{
+i=a;
+j=b;
+}
+void show()
+{
+System.out.println(&quot;i&amp;j&quot;+i+&quot; &quot;+j);
+}
+}
+class B extends A
+{
+int k;
+
+B(int a,int b,int c)
+{
+super(a,b);
+k=c;
+}
+void show()
+{
+System.out.println(&quot;k&quot;+k);
+}
+}
+class override
+{
+public static void main( String args[])
+{
+B b1=new B(1,2,3);
+b1.show();
+}
+}
